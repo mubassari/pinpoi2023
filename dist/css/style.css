@@ -37,6 +37,7 @@ section {
   background-color: #fff0 !important;
   border-color: #fff0 !important;
 }
+
 .nav-link:hover {
   color: #fff !important;
   background-color: #0069d9;
@@ -51,10 +52,13 @@ section {
   width: 2.75rem;
   right: 1rem;
   bottom: 1rem;
+  z-index: 1;
 }
 .header-img {
   max-width: 600px;
+  height: auto !important;
   max-height: 450px;
+  object-fit: cover;
 }
 
 .floating-button .scroll-to-top {
@@ -139,6 +143,13 @@ section {
   object-fit: cover;
 }
 
+.simplebar-dragging .simplebar-track,
+.simplebar-track:hover,
+.simplebar-track.simplebar-hover {
+  height: 15px;
+  cursor:pointer;
+}
+
 .nav-link,
 .scroll-to,
 .cursor-pointer,
@@ -196,6 +207,7 @@ section {
 .brand-image,
 .bg-img-left,
 .bg-img-right,
+.simplebar-track,
 .card,
 .card-img-overlay,
 .card-img-overlay i,

@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  $(".simplebar").each(function () {
+    new SimpleBar(this, { autoHide: false });
+  });
+
+  $(".navbar-nav").on("click", ".nav-link", function () {
+    if (!(window.innerWidth >= 768)) {
+      setTimeout(() => {
+        $("#navbar-toggler").click();
+      }, 150);
+    }
+  });
+
   setTimeout(() => {
     $("#preloader").slideUp(function () {
       $(this).remove();
@@ -90,8 +102,8 @@ $(document).ready(function () {
 
   $(".carousel:visible").each((i, el) => initCarousel(el));
 
-  $("[data-toggle='pill']").on("shown.bs.tab", (event) => {
-    $(event.target.getAttribute("data-target") + " .carousel").each((i, el) => initCarousel(el));
+  $("[data-bs-toggle='pill']").on("shown.bs.tab", (event) => {
+    $(event.target.getAttribute("data-bs-target") + " .carousel").each((i, el) => initCarousel(el));
   });
 
   const modalCloseButton =
