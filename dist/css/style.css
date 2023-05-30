@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 section {
-  scroll-margin-top: 1.5rem;
+  scroll-margin-top: 3rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding-top: 1.5rem;
@@ -52,6 +52,11 @@ section {
   right: 1rem;
   bottom: 1rem;
 }
+.header-img {
+  max-width: 600px;
+  max-height: 450px;
+}
+
 .floating-button .scroll-to-top {
   display: none;
 }
@@ -96,16 +101,6 @@ section {
 }
 .carousel-item .card img {
   max-height: 100%;
-}
-
-.gradient-bg {
-  background: linear-gradient(227deg, #4057b4, #9a06ea, #19339b, #00676c, rgb(240, 72, 176));
-  background-size: 800% 800%;
-
-  -webkit-animation: gradient-bg 11s ease infinite;
-  -moz-animation: gradient-bg 11s ease infinite;
-  -o-animation: gradient-bg 11s ease infinite;
-  animation: gradient-bg 11s ease infinite;
 }
 
 .bg-img-left,
@@ -233,50 +228,5 @@ section {
 @media (max-width: 767px) {
   .carousel-item .card .img-wrapper {
     height: 17em;
-  }
-}
-
-@-webkit-keyframes gradient-bg {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}
-@-moz-keyframes gradient-bg {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}
-@-o-keyframes gradient-bg {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}
-@keyframes gradient-bg {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
   }
 }

@@ -97,7 +97,7 @@ $(document).ready(function () {
   const modalCloseButton =
     '<button type="button" class="modal-btn btn btn-dark rounded position-fixed" data-dismiss="modal"><i class="fa fa-times"></i></button>';
 
-  $('[data-toggle="modal"][data-target="#mediaModal"]').click(function () {
+  $('[data-bs-toggle="modal"][data-bs-target="#mediaModal"]').click(function () {
     var mediaType = $(this).data("modal-type");
 
     switch (mediaType) {
@@ -168,18 +168,22 @@ const scrollToTop = () => {
   const $scrollToTop = $(".scroll-to-top");
 
   if ($(document).scrollTop() > 100) {
-    $navbar.removeClass("navbar-grow");
     $bgImg.addClass("scrolled");
     $scrollToTop.fadeIn(300);
   } else {
-    $navbar.addClass("navbar-grow");
+    $navbar.addClass("m-4 rounded");
     $bgImg.removeClass("scrolled");
     $scrollToTop.fadeOut(300);
+  }
+  if ($(document).scrollTop() > 23) {
+    $navbar.removeClass("m-4 rounded");
+  } else {
+    $navbar.addClass("m-4 rounded");
   }
 };
 
 $(window).on("load", () => {
-  new WOW().init();
+  // new WOW().init();
 
   scrollToTop();
 });

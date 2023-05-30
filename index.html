@@ -6,39 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Navbar Template · Bootstrap v5.0</title>
   <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" />
   <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 
 <body class="bg-dark text-light">
-  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light m-4 rounded">
-    <div class="container justify-content-md-center">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05"
-        aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light m-4 rounded shadow" id="navbar">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse justify-content-center text-center mt-3 mt-md-auto" id="navbarNav">
+        <ul class="navbar-nav nav-pills text-uppercase gap-1">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link scroll-to" href="#top">
+              <i class="fa fa-house me-1"></i> Home
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link scroll-to" href="#news">
+              <i class="fa fa-newspaper me-1"></i> News
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link scroll-to" href="#timeline">
+              <i class="fa fa-calendar me-1"></i>Timeline
+            </a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-bs-toggle="dropdown"
-              aria-expanded="false">Dropdown</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdown05">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link scroll-to" href="#registration">
+              <i class="fa fa-user-plus me-1"></i>Registration
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link scroll-to" href="#information">
+              <i class="fa fa-circle-info me-1"></i>Information
+            </a>
           </li>
         </ul>
       </div>
@@ -46,11 +51,14 @@
   </nav>
 
   <!-- Header -->
-  <header id="home" class="justify-content-center align-items-center text-light">
-    <div class="d-flex align-items-center py-5">
+  <header id="home" class="d-sm-flex justify-content-center align-items-center text-light h-100 my-5">
+    <div class="d-lg-flex align-items-center justify-content-center pb-5">
+      <div class="ms-sm-5 ms-lg-auto me-sm-5 order-2 mb-3 mb-lg-0 d-flex justify-content-center">
+        <img class="header-img rounded" src="https://placehold.co/600x500">
+      </div>
       <!-- Header Text -->
-      <div class="text-center text-dark" style="display:inline-block; position: absolute;z-index: 1000;  ">
-        <div class="p-4 rounded-end" style="background-color: #fd9843;">
+      <div class="text-center text-dark order-1 mx-lg-3">
+        <div class="p-4 bg-primary rounded text-light">
           <h1 class="text-uppercase fw-bolder">
             PERTEMUAN ILMIAH NASIONAL
           </h1>
@@ -64,69 +72,406 @@
             </blockquote>
         </div>
         <div class="text-center text-light bg-success rounded-bottom" style="display: inline-block;">
-          <h3 class="p-3 fw-bolder">Banjarmasin, 4 - 6 August 2023</h3>
+          <h3 class="p-3 fw-bolder">Banjarmasin, 04 - 06 August 2023</h3>
         </div>
       </div>
       <!-- End Header Text -->
-      <div class="ms-auto me-5">
-        <img class="rounded" src="https://placehold.co/600x400">
-      </div>
     </div>
     </figure>
-    <!-- Header Button -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 m-0 py-5 justify-content-center">
-      <div class="col mb-3">
-        <a href="member/login" class="text-decoration-none">
-          <div
-            class="card text-light cursor-pointer p-3 h-100 bg-success d-flex align-items-center justify-content-center text-center">
-            <div class="mb-1">
-              <i class="fa fa-right-to-bracket fa-2x"></i>
-            </div>
-            <div class="mb-0 h6">
-              Login to Website
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col mb-3">
-        <a href=" member/register" class="text-decoration-none">
-          <div
-            class="card text-light cursor-pointer h-100 p-3 bg-primary d-flex align-items-center justify-content-center text-center">
-            <div class="mb-1">
-              <i class="fa fa-portrait fa-2x"></i>
-            </div>
-            <div class="mb-0 h6">
-              Individual Registration
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col mb-3">
-        <a href="member/register/group" class="text-decoration-none">
-          <div
-            class="card text-light cursor-pointer h-100 p-3 bg-success d-flex align-items-center justify-content-center text-center">
-            <div class="mb-1">
-              <i class="fa fa-user-friends fa-2x"></i>
-            </div>
-            <div class="mb-0 h6">
-              Group Registration
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <!-- End Header Button -->
   </header>
   <!-- End Header -->
-  <main class="bg-light">
-    <section></section>
+  <main>
+    <section id="schedule" class="px-3 px-md-5">
+      <div class="d-flex justify-content-center">
+        <div class="h1 text-center pb-3 mb-5 mt-3 text-uppercase fw-bold border-bottom border-5 mw-100">Schedule</div>
+      </div>
+      <div class="p-0 m-0 justify-content-center nav nav-pills gap-3" id="myTab" role="tablist">
+        <div class="nav-item" role="presentation">
+          <div class="btn btn-primary mb-3 nav-link border border-3 border-primary rounded text-light active"
+            style="max-width: 150px;" data-bs-toggle="pill" data-bs-target="#tab_05082023" role="tab">
+            <p class="mb-0 fw-bold display-5">05</p>
+            <p class="h5">August 2023</p>
+          </div>
+        </div>
+        <div class="nav-item w-auto" role="presentation">
+          <div class="btn btn-primary mb-3 nav-link border border-3 border-primary rounded text-light"
+            style="max-width: 150px;" data-bs-toggle="pill" data-bs-target="#tab_06082023" role="tab">
+            <p class="mb-0 fw-bold display-5">06</p>
+            <p class="h5">August 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded">
+        <!-- Tab content -->
+        <div class="tab-content">
+          <div class="tab-pane fade show active" role="tabpanel" id="tab_05082023">
+            <div class="card table-responsive">
+              <table class="table table-hover table-bordered mb-0">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Place</th>
+                    <th>Quota</th>
+                    <th>Rundown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Lung Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Nutrition on Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Breast Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Head and Neck Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade" role="tabpanel" id="tab_06082023">
+            <div class="card table-responsive">
+              <table class="table table-hover table-bordered mb-0">
+                <thead>
+                  <tr>
+                    <th>Event</th>
+                    <th>Place</th>
+                    <th>Quota</th>
+                    <th>Rundown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Colorectal Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Multiple Myeloma
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Gynecology Cancer
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        MDT Paliatif
+                      </p>
+                    </td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td class="text-center">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Registration -->
+    <section id="registration" class="px-3 px-md-5">
+      <div class="d-flex justify-content-center">
+        <div class="h1 text-center pb-3 mb-5 mt-3 text-uppercase fw-bold border-bottom border-5 mw-100">
+          Sign In / Registration
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-xl-2">
+        <!-- Button -->
+        <div class="col p-3">
+          <div class="d-grid gap-3">
+            <a href="https://konasperdossi2023.com/member/login" class="btn btn-primary p-3">
+              <i class="fa fa-right-to-bracket me-1"></i> Sign In
+            </a>
+            <a href="https://konasperdossi2023.com/member/register" class="btn btn-success p-3">
+              <i class="fa fa-user me-1"></i> Individual Registration
+            </a>
+            <a href="https://konasperdossi2023.com/member/register/group" class="btn btn-success p-3">
+              <i class="fa fa-user-group me-1"></i> Group Registration
+            </a>
+          </div>
+        </div>
+        <!-- End Button -->
+        <!-- Symposium Fee -->
+        <div class="col p-3">
+          <div class="row row-cols-1 row-cols-sm-2 gap-3 gap-md-0">
+            <div class="col">
+              <div class="card p-3 h-100 text-dark">
+                <h4 class="text-center">General Fee</h4>
+                <hr />
+                <ul>
+                  <li>
+                    <span class="fw-bolder">Mahasiswa : </span><br />
+                    <span class="fst-italic">Rp. 300.000,-</span>
+                  </li>
+                  <li>
+                    <span class="fw-bolder">Dokter Umum / PPDS : </span><br />
+                    <span class="fst-italic">Rp. 500.000,-</span>
+                  </li>
+                  <li>
+                    <span class="fw-bolder"> Spesialis / Subspesialis : </span><br />
+                    <span class="fst-italic">Rp. 1.500.000,-</span>
+                  </li>
+                  <li>
+                    <span class="fw-bolder">Workshop : </span><br />
+                    <span class="fst-italic">Rp. 1.500.000,- per workshop</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card p-3 h-100 text-dark">
+                <h4 class="text-center">Bundling Simposium and Workshop</h4>
+                <hr />
+                <ul>
+                  <li>
+                    <span class="fw-bolder">Dokter Umum / PPDS : </span><br />
+                    <span class="fst-italic">Rp. 1.750.000,-</span>
+                  </li>
+                  <li>
+                    <span class="fw-bolder"> Spesialis / Subspesialis : </span><br />
+                    <span class="fst-italic">Rp. 2.500.000,-</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Symposium Fee -->
+      </div>
+    </section>
+    <!-- End Registration -->
+    <div class="d-md-flex">
+      <section class="col mx-3 mx-md-5 p-3 h-100">
+        <div class="d-flex justify-content-center">
+          <div class="h4 pb-3 mb-5 mt-3 text-center text-uppercase fw-bold border-bottom border-5 mw-100">
+            Contact Person
+          </div>
+        </div>
+        <div class="card text-dark table-responsive">
+          <table class="table table-hover mb-0">
+            <tbody>
+              <tr>
+                <td class="align-middle fw-bold">dr. Erna K., Sp.P-K(Onk)</td>
+                <td class="align-middle">0813 3126 4636</td>
+                <td class="align-middle text-center">
+                  <a href="http://wa.me/6281331264636" target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle fw-bold">Iin Hendrawati</td>
+                <td class="align-middle">0812 3480 0060</td>
+                <td class="align-middle text-center">
+                  <a href="http://wa.me/6281234800060" target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle fw-bold">Nur</td>
+                <td class="align-middle">0838 6724 7528</td>
+                <td class="align-middle text-center">
+                  <a href="http://wa.me/6283867247528" target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle fw-bold">Tiara</td>
+                <td class="align-middle">0856 4948 0768</td>
+                <td class="align-middle text-center">
+                  <a href="http://wa.me/6285649480768" target="_blank" class="btn btn-success">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <div class="vr m-5 d-none d-md-block"></div>
+      <section class="col mx-3 mx-md-5 p-3 h-100">
+        <div class="d-flex justify-content-center">
+          <div class="h4 pb-3 mb-5 mt-3 text-center text-uppercase fw-bold border-bottom border-5 mw-100">
+            Locations
+          </div>
+        </div>
+        <div class="card text-dark table-responsive">
+          <table class="table table-hover mb-0">
+            <tbody>
+              <tr>
+                <td class="align-middle">
+                  <div class="fw-bold">Padma Hotel Semarang</div>
+                  <p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </p>
+                </td>
+                <td class="align-middle">Jl. Sultan Agung No. 86, Kota Semarang, Jawa Tengah</td>
+                <td class="align-middle text-center">
+                  <button class="btn btn-primary" data-modal-type="embed" data-toggle="modal" data-target="#mediaModal"
+                    data-media="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.005173334745!2d110.4165291!3d-7.0091294!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695373881ac0dbf0!2sPadma%20Hotel%20Semarang!5e0!3m2!1sen!2sid!4v1674867433995!5m2!1sen!2sid">
+                    <i class="fa fa-location-arrow"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle">
+                  <div class="fw-bold">Grand Candi</div>
+                  <p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </p>
+                </td>
+                <td class="align-middle">
+                  <div class="fw-bold">Distance to Venue:</div>
+                  <p>
+                    <span class="fw-bold">1,4 km</span> (± 4 minutes by vehicle)
+                  </p>
+                </td>
+                <td class="align-middle text-center">
+                  <button class="btn btn-primary" data-modal-type="embed" data-toggle="modal" data-target="#mediaModal"
+                    data-media="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9399793095554!2d110.42050421455953!3d-7.0163412949318245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b5844fd9841%3A0x9af9a992c52c211a!2sGrand%20Candi%20Hotel!5e0!3m2!1sen!2sid!4v1673595569981!5m2!1sen!2sid">
+                    <i class="fa fa-location-arrow"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="align-middle">
+                  <div class="fw-bold">Patra</div>
+                  <p>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </p>
+                </td>
+                <td class="align-middle">
+                  <div class="fw-bold">Distance to Venue:</div>
+                  <p>
+                    <span class="fw-bold">1,5 km</span> (± 5 minutes by vehicle)
+                  </p>
+                </td>
+                <td class="align-middle text-center">
+                  <button class="btn btn-primary" data-modal-type="embed" data-toggle="modal" data-target="#mediaModal"
+                    data-media="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.9657193207986!2d110.41827861455951!3d-7.0133145949339575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b7eb54f1bff%3A0xcfe42ae1e8fde612!2sPatra%20Semarang%20Hotel%20%26%20Convention!5e0!3m2!1sen!2sid!4v1673596710568!5m2!1sen!2sid">
+                    <i class="fa fa-location-arrow"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer class="text-center">t</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="/dist/js/script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container py-4">
+      <div class="col text-center">
+        <span><strong>Developed by</strong> #CV. Meta Medika# </span>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Floating Button -->
+  <div class="floating-button row row-cols-1 m-0">
+    <a href="#top" class="col scroll-to scroll-to-top btn btn-light p-0 mt-2 text-dark rounded shadow">
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- <a href="#contact" class="col scroll-to btn btn-success p-0 mt-2 text-light rounded">
+      <i class="fab fa-whatsapp"></i>
+    </a> -->
+  </div>
+  <!-- End Floating Button -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="mediaModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content"></div>
+    </div>
+  </div>
+  <!-- End Modal -->
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/script.js"></script>
 
 </body>
 
