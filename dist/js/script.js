@@ -4,7 +4,7 @@ $(document).ready(function () {
   });
 
   $(".navbar-nav").on("click", ".nav-link", function () {
-    if (!(window.innerWidth >= 768)) {
+    if (!(window.innerWidth >= 992)) {
       setTimeout(() => {
         $("#navbar-toggler").click();
       }, 150);
