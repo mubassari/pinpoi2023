@@ -134,7 +134,7 @@ $(document).ready(function () {
         var mediaSrc = $(this).data("media");
         $("#mediaModal .modal-content").html(
           modalCloseButton +
-            '<div class="ratio ratio-16x9"><video class="embed-responsive-item" poster="' +
+            '<div class="ratio ratio-16x9"><video class="rounded" poster="' +
             videoPoster +
             '"controls> <source src="' +
             mediaSrc +
@@ -159,7 +159,7 @@ $(document).ready(function () {
         var mediaSrc = $(this).data("media");
         $("#mediaModal .modal-content").html(
           modalCloseButton +
-            '<div class="ratio ratio-16x9"><iframe class="embed-responsive-item" src="' +
+            '<div class="ratio ratio-16x9"><iframe class="rounded" src="' +
             mediaSrc +
             '" allowfullscreen loading="lazy"></iframe></div>'
         );
