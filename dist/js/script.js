@@ -107,7 +107,7 @@ $(document).ready(function () {
   });
 
   const modalCloseButton =
-    '<button type="button" class="modal-btn btn btn-dark rounded position-fixed" data-dismiss="modal"><i class="fa fa-times"></i></button>';
+    '<button type="button" class="modal-btn btn btn-dark rounded position-fixed" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>';
 
   $('[data-bs-toggle="modal"][data-bs-target="#mediaModal"]').click(function () {
     var mediaType = $(this).data("modal-type");
@@ -134,7 +134,7 @@ $(document).ready(function () {
         var mediaSrc = $(this).data("media");
         $("#mediaModal .modal-content").html(
           modalCloseButton +
-            '<div class="embed-responsive embed-responsive-16by9"><video class="embed-responsive-item" poster="' +
+            '<div class="ratio ratio-16x9"><video class="embed-responsive-item" poster="' +
             videoPoster +
             '"controls> <source src="' +
             mediaSrc +
@@ -159,7 +159,7 @@ $(document).ready(function () {
         var mediaSrc = $(this).data("media");
         $("#mediaModal .modal-content").html(
           modalCloseButton +
-            '<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="' +
+            '<div class="ratio ratio-16x9"><iframe class="embed-responsive-item" src="' +
             mediaSrc +
             '" allowfullscreen loading="lazy"></iframe></div>'
         );
