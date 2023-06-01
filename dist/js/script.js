@@ -122,8 +122,10 @@ $(document).ready(function () {
         var mediaUrl = $(this).data("baseurl");
         var mediaSrc = $(this).data("list");
         var mediaImg = modalCloseButton;
-        mediaSrc.forEach((element) => {
-          mediaImg += '<img class="rounded" src="' + mediaUrl + element.trim() + '">';
+        mediaSrc.forEach((element, index, arr) => {
+          mediaImg += `<img class="rounded-${index == 0 ? "top" : index == arr.length-1 ? "bottom" : "0"}" src="${
+            mediaUrl + element.trim()
+          }">`;
         });
         $("#mediaModal .modal-content").html(mediaImg);
 
