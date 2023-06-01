@@ -147,7 +147,7 @@ section {
 .simplebar-track:hover,
 .simplebar-track.simplebar-hover {
   height: 15px;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .nav-link,
@@ -203,6 +203,7 @@ section {
 .card-img-overlay .card-title {
   background-color: rgba(52, 58, 64, 0.75) !important;
 }
+
 #navbar,
 .brand-image,
 .bg-img-left,

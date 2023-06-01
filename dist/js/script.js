@@ -107,7 +107,7 @@ $(document).ready(function () {
   });
 
   const modalCloseButton =
-    '<button type="button" class="modal-btn btn btn-dark rounded position-fixed" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>';
+    '<button type="button" class="modal-btn btn btn-light rounded position-fixed" style="top:1rem;right:2rem;"data-bs-dismiss="modal"><i class="fa fa-times"></i></button>';
 
   $('[data-bs-toggle="modal"][data-bs-target="#mediaModal"]').click(function () {
     var mediaType = $(this).data("modal-type");
