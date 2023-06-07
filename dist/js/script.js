@@ -111,7 +111,6 @@ $(document).ready(function () {
 
   $('[data-bs-toggle="modal"][data-bs-target="#mediaModal"]').click(function () {
     var mediaType = $(this).data("modal-type");
-
     switch (mediaType) {
       case "image":
         var mediaSrc = $(this).data("media");
@@ -148,6 +147,7 @@ $(document).ready(function () {
         var modalContent = $(this).data("info-id");
         var modalTitle = $(this).find(".title").text();
         $("#mediaModal .modal-content").html(
+          modalCloseButton +
           '<div class="modal-header"><h5 class="modal-title font-weight-bold">' +
             modalTitle +
             '</h5><button type="button" class="close" data-dismiss="modal"><span>&times;</span></button></div><div class="modal-body">' +
@@ -171,6 +171,8 @@ $(document).ready(function () {
         $("#mediaModal .modal-content").html("");
         break;
     }
+    
+    $("#mediaModal .modal-header").addClass('d-none');
   });
 
   $("#mediaModal").on("hidden.bs.modal", () => $("#mediaModal .modal-content").html(""));
